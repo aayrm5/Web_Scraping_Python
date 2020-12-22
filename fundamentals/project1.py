@@ -31,8 +31,7 @@ def scrape(bookurl,filename):
     price = product_main.xpath(".//p[1]/text()")[0]
     availability = product_main.xpath(".//p[2]/text()")[1].strip()
     in_stock = ''.join(list(filter(lambda x:x.isdigit(), availability)))
-    description = tree.xpath(
-        '//div[@id='product_description]/following-siblings::p/text()')[0]
+    description = tree.xpath("//div[@id='product_description']/following-siblings::p/text()")[0]
     book_information = {
         'title':title,
         'price':price,
