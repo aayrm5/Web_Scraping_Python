@@ -19,7 +19,7 @@ def write_to_csv(filename, data):
 @click.command()
 @click.option('--bookurl',
               default='http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html',
-              help='Please provide a book url from books.toscrape.com'  )
+              help='Please provide a book url from books.toscrape.com')
 @click.option('--filename',default='output.json', help='Please provide a filename CSV/JSON')
 
 def scrape(bookurl,filename):
